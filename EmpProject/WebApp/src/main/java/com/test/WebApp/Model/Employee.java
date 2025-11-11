@@ -8,7 +8,7 @@ public class Employee {
 	private int empSalary;
 	private String empDepartment;
 	
-	Employee(int empId, String empName, int empSalary, String empDepartment){
+	public Employee(int empId, String empName, int empSalary, String empDepartment){
 		
 		this.empId=empId;
 		this.empName=empName;
@@ -17,6 +17,10 @@ public class Employee {
 		
 	}
 
+	public Employee() {
+		
+	}
+	
 	public int getEmpId() {
 		return empId;
 	}

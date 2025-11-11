@@ -32,4 +32,8 @@ public class EmployeeService {
 		return new Employee(0,"NA",0,"NA");
 	}
 	
+	public void createEmployee(Employee emp) {
+		employees.add(emp);
+	}
+	
 }

@@ -57,5 +57,14 @@ public class EmployeeService {
 		}
 		
 	}
+
+	public long getAverageSalary() {
+		
+		long avg=0;
+		for(Employee e : employees) {
+			avg=avg+e.getEmpSalary();
+		}
+		return avg/employees.size();
+	}
 	
 }

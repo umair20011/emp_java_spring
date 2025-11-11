@@ -48,4 +48,9 @@ public class EmployeeControlller {
 		service.updateSalary(id,salary);
 	}
 	
+	@GetMapping("/GET/employee/average-salary")
+	public long getAverageSalary() {
+		return service.getAverageSalary();
+	}
+	
 }

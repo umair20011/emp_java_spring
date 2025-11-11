@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,19 +21,24 @@ public class EmployeeControlller {
 	@Autowired
 	EmployeeService service;
 	
-	@GetMapping("/employee/all")
+	@GetMapping("/GET/employee/all")
 	public List<Employee> getEmployees(){
 		return service.getEmployees();
 	}
 	
-	@GetMapping("/employee/{id}")
+	@GetMapping("/GET/employee/{id}")
 	public Employee getEmployee(@PathVariable int id) {
 		return service.getEmployee(id);
 	}
 	
-	@PostMapping("/employee/createEmployee")
+	@PostMapping("/POST/employee/createEmployee")
 	public void createEmployee(@RequestBody Employee emp) {
 		service.createEmployee(emp);
+	}
+	
+	@DeleteMapping("/DELETE/employee/{id}")
+	public void deleteEmployee(@PathVariable int id) {
+		service.deleteEmployee(id);
 	}
 	
 }

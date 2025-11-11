@@ -35,5 +35,16 @@ public class EmployeeService {
 	public void createEmployee(Employee emp) {
 		employees.add(emp);
 	}
+
+	public void deleteEmployee(int id) {
+		
+		for(Employee e : employees) {
+			if(e.getEmpId()==id) {
+				employees.remove(e);
+				break;
+			}
+		}
+		
+	}
 	
 }

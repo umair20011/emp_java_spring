@@ -78,5 +78,16 @@ public class EmployeeService {
 		return hs;
 		
 	}
+
+	public List<Employee> employeesWithAboveAvg() {
+		List<Employee> list=new ArrayList<>();
+		long avg=getAverageSalary();
+		for(Employee e : employees) {
+			if(e.getEmpSalary()>avg) {
+				list.add(e);
+			}
+		}
+		return list;
+	}
 	
 }

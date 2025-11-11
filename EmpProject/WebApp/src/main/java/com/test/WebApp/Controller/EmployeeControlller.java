@@ -58,4 +58,9 @@ public class EmployeeControlller {
 		return service.getHighestSalary();
 	}
 	
+	@GetMapping("/GET/employee/above-average")
+	public List<Employee> employeesWithAboveAvg(){
+		return service.employeesWithAboveAvg();
+	}
+	
 }

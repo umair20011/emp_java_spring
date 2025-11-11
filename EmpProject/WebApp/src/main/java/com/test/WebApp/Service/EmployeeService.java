@@ -66,5 +66,17 @@ public class EmployeeService {
 		}
 		return avg/employees.size();
 	}
+
+	public int getHighestSalary() {
+		
+		int hs=0;
+		for(Employee e : employees) {
+			if(e.getEmpSalary()>hs) {
+				hs=e.getEmpSalary();
+			}
+		}
+		return hs;
+		
+	}
 	
 }

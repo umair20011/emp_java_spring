@@ -53,4 +53,9 @@ public class EmployeeControlller {
 		return service.getAverageSalary();
 	}
 	
+	@GetMapping("/GET/employee/highest-salary")
+	public int getHighestSalary() {
+		return service.getHighestSalary();
+	}
+	
 }

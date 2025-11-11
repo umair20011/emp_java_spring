@@ -46,5 +46,16 @@ public class EmployeeService {
 		}
 		
 	}
+
+	public void updateSalary(int id, int salary) {
+		
+		for(Employee e : employees) {
+			if(e.getEmpId()==id) {
+				e.setEmpSalary(salary);
+				break;
+			}
+		}
+		
+	}
 	
 }
